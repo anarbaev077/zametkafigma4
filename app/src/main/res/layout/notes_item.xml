@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        app:cardBackgroundColor="@color/gray_light_background"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNotesTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="14dp"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    tools:text="@string/note_descreption"/>
+
+                <TextView
+                    android:id="@+id/tvNotesOverview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginBottom="22dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    tools:text="@string/noteDescription1"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/deleteNoteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

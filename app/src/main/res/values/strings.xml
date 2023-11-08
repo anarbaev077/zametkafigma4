@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">zametkafigma4</string>
+    <string name="notes">Notes</string>
+    <string name="type_something">Type something</string>
+    <string name="title">Title</string>
+    <string name="note_description">Сведения о машине</string>
+    <string name="note_title">Сведения о машине</string>
+    <string name="note_descreption">title</string>
+    <string name="noteDescription1">title</string>
+</resources>
