@@ -1,6 +1,7 @@
 package com.example.zametkafigma4
 
 import android.content.Context
+import android.icu.text.AlphabeticIndex
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
@@ -28,6 +29,14 @@ class NotesDataBase (
             .edit()
             .putString(NOTES_SHARED_PREF,notesGson)
             .apply()
+    }
+    fun deleteNoteAtIndex(index: Int) {
+        val getAllNotes = getAllNotes().toMutableList()
+        if (index in 0 until getAllNotes.size) {
+            getAllNotes.removeAt(index)
+            val noteGsonString = Gson(). toJson(getAllNotes)
+            sharedPreferences.edit().putString(NOTES_SHARED_PREF, noteGsonString).apply()
+        }
     }
     fun deleteAllNotes() = sharedPreferences.edit().clear().apply()
 }

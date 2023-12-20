@@ -1,10 +1,13 @@
 <resources>
-    <string name="app_name">zametkafigma4</string>
+    <string name="app_name">Notes</string>
     <string name="notes">Notes</string>
     <string name="type_something">Type something</string>
     <string name="title">Title</string>
-    <string name="note_description">Сведения о машине</string>
-    <string name="note_title">Сведения о машине</string>
+    <string name="note_description">Note description</string>
+    <string name="note_title">Note title</string>
     <string name="note_descreption">title</string>
     <string name="noteDescription1">title</string>
+    <string name="cancel_tv">Отменить</string>
+    <string name="do_you_want_to_delete_tv">Вы точно хотите удалить?</string>
+    <string name="ok">Ok</string>
 </resources>

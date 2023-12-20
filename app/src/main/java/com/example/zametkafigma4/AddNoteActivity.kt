@@ -1,11 +1,9 @@
 package com.example.zametkafigma4
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.zametkafigma4.databinding.ActivityAddNoteBinding
-import com.example.zametkafigma4.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 
 class AddNoteActivity : AppCompatActivity() {

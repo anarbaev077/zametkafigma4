@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.zametkafigma4.databinding.NotesItemBinding
 
 class NotesAdapter (
-    private val onDeleteNoteClick: () -> Unit,
+    private val onDeleteNoteClick: (index:Int) -> Unit,
+    private val reportToDetails: (notes: NotesModel) -> Unit
 ): RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
 
     private val notesList = mutableListOf<NotesModel>()
@@ -21,10 +22,10 @@ class NotesAdapter (
             private val binding: NotesItemBinding,
         ) : RecyclerView.ViewHolder(binding.root) {
             fun bind(notesModel: NotesModel) {
-                binding.tvNotesTitle.text = notesModel.noteTitle
-                binding.tvNotesOverview.text = notesModel.noteDescription
+                binding.tvNoteTitle.text = notesModel.noteTitle
+                binding.tvNoteOverview.text = notesModel.noteTitle
                 binding.deleteNoteBtn.setOnClickListener{
-                    onDeleteNoteClick.invoke(notesList)
+                    onDeleteNoteClick.invoke(notesList.indexOf(notesModel))
                 }
             }
         }
@@ -47,7 +48,7 @@ class NotesAdapter (
 
     override fun onBindViewHolder(
         holder: NotesViewHolder,
-        position: Int
+        position: Int,
     )   {
         holder.bind(notesList[position])
     }
